@@ -30,6 +30,7 @@ These elements should be linked.
 •	All outbound links in the email can be of your selection.
 
 Assets for Build
+
 Logo URL Image
 http://image.email.snow.com/lib/fea1157075670d7c75/m/6/af97139c-1339-40ef-8285-f0c3ed8e922a.png
 
