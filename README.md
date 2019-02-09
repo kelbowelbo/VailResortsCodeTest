@@ -8,7 +8,7 @@ Create a responsive email leveraging the Cerberus email framework.  The overall 
  
  
 
-Requirements
+Requirements<br>
 •	Logo should be left aligned while on desktop and shift to a center aligned while on tablet/mobile. 
 
 This element should be linked.
