@@ -31,10 +31,10 @@ These elements should be linked.
 
 Assets for Build
 
-Logo URL Image
+Logo URL Image<br>
 http://image.email.snow.com/lib/fea1157075670d7c75/m/6/af97139c-1339-40ef-8285-f0c3ed8e922a.png
 
-Hero URL Image 1
+Hero URL Image 1<br>
 http://image.email.snow.com/lib/fea1157075670d7c75/m/4/092217_Hero_Default.jpg
 Hero URL Image 2
 http://image.email.snow.com/lib/fea1157075670d7c75/m/6/SnowAlertKicker.jpg
