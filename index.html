@@ -1,15 +1,4 @@
-%%[
-var @heroImage, @heroAltText, @heroLink
-if @resortDescription == 'Vail Resort' then
-  set @heroImage = "http://image.email.snow.com/lib/fea1157075670d7c75/m/4/092217_Hero_Default.jpg"
-  set @heroAltText = "Vail Resorts"
-  set @heroLink = "https://www.epicpass.com//"
-else
-  set @heroImage = "http://image.email.snow.com/lib/fea1157075670d7c75/m/6/SnowAlertKicker.jpg"
-  set @heroAltText = "Ski Epic"
-  set @heroLink = "https://www.epicpass.com//"
-endif
-]%%
+
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -188,7 +177,7 @@ endif
 	3. mso conditional: For Windows 10 Mail
 -->
 <body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
-	<center style="width: 100%; background-color: #ffffff;">
+    <center style="width: 100%; background-color: #ffffff;">
     <!--[if mso | IE]>
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;">
     <tr>
@@ -227,7 +216,19 @@ endif
                           <!-- HERO IMAGE, Flush : BEGIN -->
                           <tr>
                               <td style="background-color: #ffffff; text-align: center;">
-                                <a href="%%=v(@heroLink)=%%"><img src="%%=v(@heroImage)=%%" width="200" height="50" alt=""></a>
+                                %%[
+                                var @heroImage, @heroAltText, @heroLink
+                                if @resortDescription == 'Vail Resort' then
+                                  set @heroImage = "http://image.email.snow.com/lib/fea1157075670d7c75/m/4/092217_Hero_Default.jpg"
+                                  set @heroAltText = "Vail Resorts"
+                                  set @heroLink = "https://www.epicpass.com//"
+                                else
+                                  set @heroImage = "http://image.email.snow.com/lib/fea1157075670d7c75/m/6/SnowAlertKicker.jpg"
+                                  set @heroAltText = "Ski Epic"
+                                  set @heroLink = "https://www.epicpass.com//"
+                                endif
+                                ]%%
+                                <a href="%%=v(@heroLink)=%%"><img src="%%=v(@heroImage)=%%" width="200" height="50" alt="%%=v(@heroAltText)=%%"></a>
                               </td>
                           </tr>
                           <!-- HERO IMAGE, Flush : END -->
@@ -237,7 +238,7 @@ endif
 	                                <p style="margin: 0; text-align: left;">Dear %%=v(@firstName)=%%,
                                   </p>
                                   <p style="margin; 0; text-align: center;">Trees cover up a multitude of sins. Now it's beginning to make a little sense.
-                                    I'sn't that fantastic? You can just push a little tree out of your brush like that.<br><br>
+                                    Isn't that fantastic? You can just push a little tree out of your brush like that.<br><br>
                                     Let's make some happy little clouds in our world. I get carried away with this brush cleaning.
                                     Little short strokes. Nothing's gonna make your husband or wife madder than coming home and having a <a href="https://www.vail.com/explore-the-resort/during-your-stay/nightlife-and-apres.aspx?tc_1=3">snow-covered dinner.</a>
                                     You need to have a very firm paint to do this. Just a happy little shadow that lives in there.
