@@ -4,7 +4,7 @@ Email HTML Test
 
 Overview
 Create a responsive email leveraging the Cerberus email framework.  The overall layout of the email should be as the following:
-
+WIREFRAME BLUEPRINT IMAGE - see email.
  
  
 
