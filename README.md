@@ -49,7 +49,7 @@ Follow Up Questions
 
 •	An image went out with the wrong pricing on it, how can you correct this issue? Be prepared to act quickly but not foolishly, use humor, apologize, change the url linked image, if that is time consuming, you can use an “alt” tag and place simple language that corrects this while you are amending the image narrative in the event that the pricing is hard coded within the image.
 	
-•	Whoops a URL went out incorrect, could you potentially fix this issue?  There are a few ways to deal 1) Send a follow-up communication to the recipients, use humor and apologize, with the new URL.  2) If it is not contained in the email, you can update the repo with the coded URL immediately.  Regardless of form, I'm a believer in telling those affected by this error immediately for any further direction or historic protocal in this area.
+•	Whoops a URL went out incorrect, could you potentially fix this issue?  There are a few ways to deal 1) Send a follow-up communication to the recipients, use humor and apologize, with the new URL.  2) If it is not contained in the email, you can update the repo with the coded URL immediately.  Regardless of form, I'm a believer in telling those affected by this error immediately for any further direction or historic protocol in this area.
 
 •	Are background images supported in Outlook? Yes.  In the past, to see background images in Outlook, the image had to be a table image, but no longer is that a requirement.
 
