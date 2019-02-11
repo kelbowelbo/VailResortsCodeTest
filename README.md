@@ -45,11 +45,11 @@ http://image.email.snow.com/lib/fea1157075670d7c75/m/11/947c1955-6051-45d0-9dfa-
 
 Follow Up Questions
 
-•	What is the main difference between developing for email rather than a website?  As a coder, the fact that you use inline CSS coding for an email development environment to avoid the various preprocessors that may change the coded styling.
+•	What is the main difference between developing for email rather than a website?  As a developer, the fact that you use inline CSS coding for an email development environment to avoid the various preprocessors that may change the coded styling.  With that being said, with the Cerberus Wireframe, the styling is not all inline, rather it is included within the head of the html as to avoid the preprocessor issues.
 
 •	An image went out with the wrong pricing on it, how can you correct this issue? Be prepared to act quickly but not foolishly, use humor, apologize, change the url linked image, if that is time consuming, you can use an “alt” tag and place simple language that corrects this while you are amending the image narrative in the event that the pricing is hard coded within the image.
 	
-•	Whoops a URL went out incorrect, could you potentially fix this issue?  Yes, recode 
+•	Whoops a URL went out incorrect, could you potentially fix this issue?  There are a few ways to deal 1) Send a follow-up communication to the recipients, use humor and apologize, with the new URL.  2) If it is not contained in the email, you can update the repo with the coded URL immediately.  Regardless of form, I'm a believer in telling those affected by this error immediately for any further direction or historic protocal in this area.
 
 •	Are background images supported in Outlook? Yes.  In the past, to see background images in Outlook, the image had to be a table image, but no longer is that a requirement.
 
