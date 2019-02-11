@@ -1,3 +1,16 @@
+%%[
+var @heroImage, @heroAltText, @heroLink
+if @resortDescription == 'Vail Resort' then
+  set @heroImage = "http://image.email.snow.com/lib/fea1157075670d7c75/m/4/092217_Hero_Default.jpg"
+  set @heroAltText = "Vail Resorts"
+  set @heroLink = "https://www.epicpass.com//"
+else
+  set @heroImage = "http://image.email.snow.com/lib/fea1157075670d7c75/m/6/SnowAlertKicker.jpg"
+  set @heroAltText = "Ski Epic"
+  set @heroLink = "https://www.epicpass.com//"
+endif
+]%%
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -5,6 +18,7 @@
     <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+
     <title>Vail Resorts Experiences</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
     <!-- CSS Reset : BEGIN -->
@@ -43,7 +57,7 @@
             border-spacing: 0 !important;
             border-collapse: collapse !important;
             table-layout: fixed !important;
-            margin: 0 auto !important;
+            /* margin: 0 auto !important; */
         }
 
         /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
@@ -108,22 +122,10 @@
         }
 
     </style>
-
-    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
-    <!--[if gte mso 9]>
-    <xml>
-        <o:OfficeDocumentSettings>
-            <o:AllowPNG/>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
-    </xml>
-    <![endif]-->
-
     <!-- CSS Reset : END -->
 
     <!-- Progressive Enhancements : BEGIN -->
     <style>
-
         /* What it does: Hover styles for buttons */
         .button-td,
         .button-a {
@@ -132,7 +134,7 @@
 	    .button-td-primary:hover,
 	    .button-a-primary:hover {
 	        background: #555555 !important;
-	        border-color: #555555 !important;
+	        border-color: #55555 !important;
 	    }
 
         /* Media Queries */
@@ -141,6 +143,7 @@
             .email-container {
                 width: 100% !important;
                 margin: auto !important;
+                align-items: center !important;
             }
 
             /* What it does: Forces table cells into full-width rows. */
@@ -185,7 +188,7 @@
 	3. mso conditional: For Windows 10 Mail
 -->
 <body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
-	<center style="width: 100%; background-color: #fdf9f9;">
+	<center style="width: 100%; background-color: #ffffff;">
     <!--[if mso | IE]>
     <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;">
     <tr>
@@ -206,47 +209,46 @@
         <!-- Preview Text Spacing Hack : END -->
 
         <!-- Email Body : BEGIN -->
-        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: auto;" class="email-container">
+        <table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600px" style="margin: auto;" class="email-container">
 	        <!-- Email Header : BEGIN -->
+          <!-- LOGO BEGIN-->
             <tr>
-                <td style="padding: 20px 0; text-align:">
-                    <img src="http://image.email.snow.com/lib/fea1157075670d7c75/m/6/af97139c-1339-40ef-8285-f0c3ed8e922a.png" width="200" height="50" alt="alt_text" border="0" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                <td style="padding: 20px 0; text-align:"auto" class="center-on-narrow">
+                    <a class="button-a button-a-primary" href="https://www.epicpass.com//"</a><img src="http://image.email.snow.com/lib/fea1157075670d7c75/m/6/af97139c-1339-40ef-8285-f0c3ed8e922a.png" width="200" height="50" alt="Epic_Ski" border="0" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
                 </td>
             </tr>
+          <!-- LOGO END -->
 	        <!-- Email Header : END -->
 
-            <!-- Hero Image, Flush : BEGIN -->
-            <tr>
-                <td style="background-color: #ffffff;"
-                  %%[ IF [resortDescription] == 'Vail Resort' THEN ]%%
-                  http://image.email.snow.com/lib/fea1157075670d7c75/m/4/092217_Hero_Default.jpg
-                  %%[ ELSE ]%%
-                  http://image.email.snow.com/lib/fea1157075670d7c75/m/6/SnowAlertKicker.jpg
-                  %%[ ENDIF ]%%>
-
-                    <!-- <img src="http://image.email.snow.com/lib/fea1157075670d7c75/m/4/092217_Hero_Default.jpg" width="300" height="" alt="alt_text" border="0" style="width: 100%; max-width: 300px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block; float: left" class="g-img"> -->
-                    <!-- <a href="http://image.email.snow.com/lib/fea1157075670d7c75/m/4/092217_Hero_Default.jpg" target="new" alias="%%=CONCAT(resortDescription,' Vail Resort ')=%%"> -->
-                    <!-- <img src="http://image.email.snow.com/lib/fea1157075670d7c75/m/6/SnowAlertKicker.jpg" width="300" height="" alt="alt_text" border="0" style="width: 100%; max-width: 300px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img"> -->
-                    <!-- <a href="http://image.email.snow.com/lib/fea1157075670d7c75/m/4/092217_Hero_Default.jpg" target="new" alias="%%=CONCAT(resortDescription,'')=%%"> -->
-
-                </td>
-            </tr>
-            <!-- Hero Image, Flush : END -->
-
-            <!-- Background Image with Text : BEGIN -->
+            <!-- COPYRIGHT SECTION WITH TEXT : BEGIN -->
             <tr>
 	                <div>
 	                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-	                        <tr>
+                          <!-- HERO IMAGE, Flush : BEGIN -->
+                          <tr>
+                              <td style="background-color: #ffffff; text-align: center;">
+                                <a href="%%=v(@heroLink)=%%"><img src="%%=v(@heroImage)=%%" width="200" height="50" alt=""></a>
+                              </td>
+                          </tr>
+                          <!-- HERO IMAGE, Flush : END -->
+
+                          <tr>
 	                            <td valign="middle" style="text-align: center; padding: 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000;">
-	                                <p style="margin: 0;><"Dear"> %%[var @FirstName set @FirstName = [field name in data extension or list]]%% %%=v(@FirstName)=%%,><"check out this offer"</p>
+	                                <p style="margin: 0; text-align: left;">Dear %%=v(@firstName)=%%,
+                                  </p>
+                                  <p style="margin; 0; text-align: center;">Trees cover up a multitude of sins. Now it's beginning to make a little sense.
+                                    I'sn't that fantastic? You can just push a little tree out of your brush like that.<br><br>
+                                    Let's make some happy little clouds in our world. I get carried away with this brush cleaning.
+                                    Little short strokes. Nothing's gonna make your husband or wife madder than coming home and having a <a href="https://www.vail.com/explore-the-resort/during-your-stay/nightlife-and-apres.aspx?tc_1=3">snow-covered dinner.</a>
+                                    You need to have a very firm paint to do this. Just a happy little shadow that lives in there.
+                                  </p>
 	                            </td>
 	                        </tr>
 	                    </table>
                       <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
                           <tr>
                               <td class="button-td button-td-primary" style="border-radius: 4px; background: #222222;">
-                      <a class="button-a button-a-primary" href="https://google.com/" style="background: #222222; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 4px;">Let's Hit The Slopes!</a>
+                      <a class="button-a button-a-primary" href="https://www.epicpass.com//" style="background: #222222; border: 1px solid #000000; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #99c2ff; display: block; border-radius: 4px;">Let's Go Epic Skiing!</a>
                       </td>
                           </tr>
                       </table>
@@ -257,9 +259,9 @@
 	                <![endif]-->
 
 	        </tr>
-	        <!-- Background Image with Text : END -->
+	        <!-- COPYRIGHTING SECTION WITH TEXT : END -->
 
-	        <!-- 2 Even Columns : BEGIN -->
+	        <!-- 2 Even Columns TWO PICS: BEGIN -->
 	        <tr>
 	            <td style="padding: 10px; background-color: #ffffff;">
 	                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -269,7 +271,7 @@
 	                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 	                                <tr>
 	                                    <td style="padding: 10px; text-align: center">
-	                                        <img src="http://image.email.snow.com/lib/fea1157075670d7c75/m/11/1435a18b-edec-4a0b-b4bd-f3a9f1ef6def.jpg" width="270" height="" alt="alt_text" border="0" style="width: 100%; max-width: 270px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+	                                        <a href="https://www.vail.com/explore-the-resort/during-your-stay/nightlife-and-apres.aspx?tc_1=3"><img src="http://image.email.snow.com/lib/fea1157075670d7c75/m/11/1435a18b-edec-4a0b-b4bd-f3a9f1ef6def.jpg" width="270" height="" alt="alt_text" border="0" style="width: 100%; max-width: 270px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;"></a>
 	                                    </td>
 	                                </tr>
 	                            </table>
@@ -280,7 +282,7 @@
 	                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 	                                <tr>
 	                                    <td style="padding: 10px; text-align: center">
-	                                        <img src="http://image.email.snow.com/lib/fea1157075670d7c75/m/11/947c1955-6051-45d0-9dfa-fc9e8aa2b0b5.jpg" width="270" height="" alt="alt_text" border="0" style="width: 100%; max-width: 270px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+	                                        <a href="https://www.vail.com/explore-the-resort/during-your-stay/nightlife-and-apres.aspx?tc_1=3"><img src="http://image.email.snow.com/lib/fea1157075670d7c75/m/11/947c1955-6051-45d0-9dfa-fc9e8aa2b0b5.jpg" width="270" height="" alt="alt_text" border="0" style="width: 100%; max-width: 270px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;"></a>
 	                                    </td>
 	                                </tr>
 
@@ -291,23 +293,30 @@
 	                </table>
 	            </td>
 	        </tr>
-	        <!-- 2 Even Columns : END -->
+	        <!-- 2 Even Columns TWO PICS: END -->
 	    </table>
 	    <!-- Email Body : END -->
 
-	    <!-- Email Footer : BEGIN -->
-        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: auto;" class="email-container">
+	    <!-- Email FOOTER : BEGIN -->
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%;" style="margin: auto;" class="email-container">
 	        <tr>
-	            <td style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #000000;">
-	                <webversion style="color: #cccccc; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
-	                <br><br>
-	                Vail Resorts Management Company<br><span class="unstyle-auto-detected-links">390 Interlocken Crescent    Broomfield, CO 80021    <br>303-404-1800<br>© 2019 Vail Resorts Management Company. All Rights Reserved</span>
+	            <td style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #000000; background-color: #e8c47d;">
+	               <a style="color: #cc6600; text-decoration: underline; font-weight: bold;" href="https://kelbowelbo.github.io/VailResortsCodeTest/index.html">View as a Web Page</a>
+	                <br>
+                  <br>
+	                Vail Resorts Management Company<br><span class="unstyle-auto-detected-links">390 Interlocken Crescent    Broomfield, CO 80021    <br>
+                  <br>
+                      <a href="tel:3034041800" data-track='click' data-component-element="US Phone" class="contactinfo">
+                        Click <strong>HERE</strong> to Call from the US (303) 404-1800
+                      </a>
+                    <br>
+                    <br>© 2019 Vail Resorts Management Company. All Rights Reserved</span>
 	                <br><br>
 	                <unsubscribe style="color: #888888; text-decoration: underline;">unsubscribe</unsubscribe>
 	            </td>
 	        </tr>
 	    </table>
-	    <!-- Email Footer : END -->
+	    <!-- Email FOOTER : END -->
 	    <!-- Full Bleed Background Section : BEGIN -->
 	    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #709f2b;">
 	        <tr>
